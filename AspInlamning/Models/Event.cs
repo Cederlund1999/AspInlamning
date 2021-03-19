@@ -17,5 +17,7 @@ namespace AspInlamning.Models
         public int SpotsAvailable { get; set; }
 
         public Organizer Organizer { get; set; }
+
+
     }
 }

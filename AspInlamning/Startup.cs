@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using AspInlamning.Data;
 
 namespace AspInlamning
 {
@@ -24,6 +26,10 @@ namespace AspInlamning
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddDbContext<AspInlamningContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AspInlamningContext")));
+            services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
