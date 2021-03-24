@@ -8,9 +8,6 @@ namespace AspInlamning.Models
     public class Register
     {
         public int RegisterID { get; set; }
-        public int AttendeeID { get; set; }
-        public int EventID { get; set; }
-
         public Attendee Attendee { get; set; }
         public Event Event { get; set; }
     }

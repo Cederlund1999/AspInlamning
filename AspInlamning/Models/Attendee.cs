@@ -10,9 +10,7 @@ namespace AspInlamning.Models
         public int AttendeeID { get; set; }
         public string Phone { get; set; }
         public string Name { get; set; }
-
         public string EmailAdress { get; set; }
-
         public ICollection<Register> Register { get; set; }
     }
 }

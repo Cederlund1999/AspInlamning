@@ -1,0 +1,61 @@
+﻿@page
+@model AspInlamning.Pages.RegisterEvent.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Organizer
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Register) {
+        <tr>
+            <td>
+                @item.Event.Title
+            </td>
+
+            <td>
+                @item.Event.Description
+            </td>
+
+            <td>
+                @item.Event.OrganizerID
+            </td>
+            <td>
+                @item.Event.Address
+            </td>
+            <td>
+                @item.Event.Date
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.RegisterID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.RegisterID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.RegisterID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
