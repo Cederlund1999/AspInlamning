@@ -5,10 +5,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Registered Events</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    Information about your registered events
 </p>
 <table class="table">
     <thead>
@@ -19,15 +19,18 @@
             <th>
                 Description
             </th>
-            <th>
-                Organizer
-            </th>
+            
             <th>
                 Address
             </th>
             <th>
                 Date
             </th>
+            <th>
+                Place
+            </th>
+            
+
         </tr>
     </thead>
     <tbody>
@@ -40,10 +43,7 @@
             <td>
                 @item.Event.Description
             </td>
-
-            <td>
-                @item.Event.OrganizerID
-            </td>
+            
             <td>
                 @item.Event.Address
             </td>
@@ -51,8 +51,11 @@
                 @item.Event.Date
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.RegisterID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.RegisterID">Details</a> |
+                @item.Event.Place
+            </td>
+            
+            <td>
+                
                 <a asp-page="./Delete" asp-route-id="@item.RegisterID">Delete</a>
             </td>
         </tr>

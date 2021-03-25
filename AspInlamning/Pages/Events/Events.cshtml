@@ -19,6 +19,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Event[0].OrganizerID)
             </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Event[0].Description)
             </th>
@@ -34,6 +35,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Event[0].SpotsAvailable)
             </th>
+            
             <th></th>
         </tr>
     </thead>
@@ -61,6 +63,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.SpotsAvailable)
             </td>
+            
             <td>
                 
                 <a type="button" class="btn btn-primary btn-sm" asp-page="/Events/JoinEvent" asp-route-id="@item.EventID">Join</a>
