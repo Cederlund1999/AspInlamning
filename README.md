@@ -10,3 +10,6 @@ Program.cs är våran entry point i webbapplikationen. Det är i program.cs allt
 Appsettings.json är en konfigurationsfil. Där lägger man in t.ex connection string till databasen.
 wwwroot innehåller statiska filer, såsom html, css och javascript filer som ska se likadana ut varje gång en användare gör en request om det. Samt olika libraries som bootstrap m.m.
 Pages mappen innehåller alla razor pages. Varje razor page har två delar. Content page och PageModel. 
+Content page har hand om allt i UIn. Hur sidan ska se ut. I en Content page har man razor kod och en referens till Model som använder PageModel.
+I PageModel har man allt logik och kommunikation med annan kod. Där finns b.la onpost och onget för att reagera på http requests. 
+
